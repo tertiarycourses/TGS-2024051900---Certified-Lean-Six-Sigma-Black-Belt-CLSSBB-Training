@@ -195,13 +195,17 @@ def newest(pattern):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     dry = "--dry-run" in sys.argv
+    sync_activities = "--with-activities" in sys.argv
     repo = "."
     if "--repo" in sys.argv:
         repo = sys.argv[sys.argv.index("--repo") + 1]
         args = [a for a in args if a != repo]
     if not args:
-        raise SystemExit("Usage: gdrive_push.py <drive-folder-link-or-id> [--repo DIR] [--dry-run]\n"
-                         "The Google Drive courseware folder link MUST be supplied by the user.")
+        raise SystemExit("Usage: gdrive_push.py <drive-folder-link-or-id> [--repo DIR] [--dry-run] "
+                         "[--with-activities]\n"
+                         "The Google Drive courseware folder link MUST be supplied by the user.\n"
+                         "--with-activities syncs labs/ into the Drive Activities folder; without it "
+                         "Activities is left untouched (the sync archives any Drive file not in labs/).")
     m = re.search(r"folders/([A-Za-z0-9_-]{10,})", args[0])
     root = m.group(1) if m else args[0]
 
@@ -230,8 +234,15 @@ def main():
         print(f"  {real_name}{' (will be created)' if created else ''}:")
         push_folder(root, folder_path, files, dry)
 
+    # The Activities sync is OPT-IN. It is an rclone *sync*, so every pre-existing
+    # file in the Drive Activities folder that is not in local labs/ gets moved to
+    # Activities/archive/ — which on an established course silently displaces the
+    # trainer's own template library. Pass --with-activities to allow it.
     labs_dir = os.path.join(repo, "labs")
-    if os.path.isdir(labs_dir):
+    if not sync_activities:
+        print("  Activities: SKIPPED (pass --with-activities to sync labs/ into it — "
+              "note this archives any existing Drive files not present in labs/)")
+    elif os.path.isdir(labs_dir):
         push_labs(root, labs_dir, dry)
     else:
         print("  Activities: no labs/ folder found — skipped")

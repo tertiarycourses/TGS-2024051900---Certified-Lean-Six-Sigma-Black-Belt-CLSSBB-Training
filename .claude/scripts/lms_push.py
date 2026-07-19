@@ -187,7 +187,9 @@ def collect_links(root):
          "WA (SAQ) question paper .docx")
     # The practical instrument is EITHER a Case Study OR a Practical Performance — never both.
     take("caseStudyLink", "assessment",
-         lambda n: docx(n) and re.search(r"case study|\(cs\)", n, re.I),
+         # Matches "Case Study - ...", "... (CS) ..." AND the "CS - <course>.docx"
+         # prefix form used on Drive. The ^cs\b anchor mirrors the PP matcher below.
+         lambda n: docx(n) and re.search(r"^\s*cs\b|case study|\(cs\)", n, re.I),
          "Case Study (CS) question paper .docx")
     take("practicalPerformanceAssessmentLink", "assessment",
          lambda n: docx(n) and re.search(r"^\s*pp\b|practical performance|\(pp\)", n, re.I),
