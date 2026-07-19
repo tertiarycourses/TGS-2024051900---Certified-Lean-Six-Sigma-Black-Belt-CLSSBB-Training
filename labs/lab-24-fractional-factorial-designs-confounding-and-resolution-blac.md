@@ -80,4 +80,4 @@ Save your output — it forms part of your CAPSTONE PROJECT PACK, which you cons
 
 ---
 
-*Certified Lean Six Sigma Black Belt (CLSSBB) Training · TGS-2024051900 · Version v2 · © 2026 Tertiary Infotech Academy Pte Ltd*
+*Certified Lean Six Sigma Black Belt (CLSSBB) Training · TGS-2024051900 · Version v3 · © 2026 Tertiary Infotech Academy Pte Ltd*

@@ -44,6 +44,7 @@ FOLDERS = {
     "learner_guide": ("Learner Guide", "learner guide"),
     "lesson_plan": ("Lesson Plan", "lesson plan"),
     "assessment": ("Assessment", "assessment"),
+    "activities": ("Activities", "activit"),
 }
 
 
@@ -85,6 +86,23 @@ def find_dir(root, canonical, hint):
         raise SystemExit(f"Drive folder '{canonical}' not found. Run /gdrive-push first to create "
                          f"and populate it. Found: {[d['Name'] for d in dirs] or 'nothing'}")
     return match["Name"]
+
+
+def find_dir_opt(root, canonical, hint):
+    """Like find_dir, but returns the whole dir entry (or None) instead of raising.
+
+    Used for OPTIONAL folders such as Activities, whose absence should be reported
+    as a missing field rather than aborting the whole push.
+    """
+    dirs = rc(["lsjson", f"{REMOTE}:", "--dirs-only"], root, parse=True)
+    return (next((d for d in dirs if d["Name"].strip().lower() == canonical.lower()), None)
+            or next((d for d in dirs if hint in d["Name"].strip().lower()), None))
+
+
+def folder_link(root, path, folder_id):
+    """Ensure 'anyone with the link can view' on a FOLDER, return its Drive URL."""
+    rc(["link", f"{REMOTE}:{path}"], root)  # creates the reader permission
+    return f"https://drive.google.com/drive/folders/{folder_id}?usp=sharing"
 
 
 def files_in(root, path):
@@ -150,6 +168,16 @@ def collect_links(root):
     take("slidesUrl", "learner_guide", lambda n: pdf(n) and not is_learner_guide(n), "learner slides .pdf")
     take("learnerGuideUrl", "learner_guide", lambda n: pdf(n) and is_learner_guide(n), "learner guide .pdf")
     take("lessonPlanUrl", "lesson_plan", pdf, "lesson plan .pdf")
+
+    # ---- Activities / labs: this one is a FOLDER link, not a single file. Learners
+    # need the whole activity pack (templates, worksheets, datasets), so the LMS
+    # field points at the Drive folder itself rather than at any one document.
+    act = find_dir_opt(root, *FOLDERS["activities"])
+    if act:
+        out["activitiesUrl"] = (f"{act['Name']}/ (folder)",
+                                folder_link(root, act["Name"], act["ID"]))
+    else:
+        missing.append(f"{FIELD_LABELS['activitiesUrl']}: no Activities folder found on Drive")
 
     # ---- the assessment: QUESTION PAPERS ONLY. Answer keys are trainer-only and never
     # reach the LMS, so they are filtered out before anything is picked.
@@ -341,6 +369,7 @@ FIELD_LABELS = {
     "slidesUrl": "Learner Slides URL",
     "learnerGuideUrl": "Learner Guide URL",
     "lessonPlanUrl": "Lesson Plan URL",
+    "activitiesUrl": "Activities/Lab URL",
     "writtenAssessmentLink": "Written Assessment (question paper)",
     "caseStudyLink": "Case Study (question paper)",
     "practicalPerformanceAssessmentLink": "Practical Performance (question paper)",

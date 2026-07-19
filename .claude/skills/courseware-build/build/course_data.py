@@ -52,8 +52,8 @@ data_domainN.py so they stay 100% aligned.
 TITLE        = "Certified Lean Six Sigma Black Belt (CLSSBB) Training"
 SHORT_TITLE  = "Certified Lean Six Sigma Black Belt (CLSSBB) Training"
 COURSE_CODE  = "TGS-2024051900"
-VERSION      = "v2"
-VERSION_DATE = "19 July 2026"
+VERSION      = "v3"
+VERSION_DATE = "20 July 2026"
 ORG          = "Tertiary Infotech Academy Pte Ltd"
 UEN          = "UEN: 201200696W"
 TRAINER      = "Dr. Alfred Ang"
@@ -211,10 +211,14 @@ DAY_THEMES = {
 }
 
 # ------------------------------------------------------------------ assessment
-# This course has NO practice exam. It is assessed by the capstone project and
-# the steering committee presentation delivered on Day 5.
+# The WSQ assessment is the Written Assessment (SAQ) + Case Study (CS), matching
+# the papers registered on the LMS/Drive. The capstone project and its steering
+# committee presentation are an ADDITIONAL course deliverable on top of that.
 ASSESSMENT = dict(
-    written="Capstone Project Report — the consolidated DMAIC storyboard built across Days 1-4 (K1, K2).",
-    practical="Capstone Presentation — a 15-minute steering committee presentation and defence (A1-A5).",
+    written="Written Assessment (WA) — Short-Answer Questions (SAQ), 2 questions, 1 hour, open book (K1, K2).",
+    practical="Case Study (CS) — an applied DMAIC case study, 90 minutes, open book (A1-A5).",
+    capstone="Capstone Project & Presentation — an ADDITIONAL course deliverable on top of the "
+             "WSQ assessment: the consolidated DMAIC storyboard built across Labs 1-30, presented "
+             "and defended to a steering committee on Day 5.",
     note="A minimum of 75% attendance is required to be eligible for assessment and funding.",
 )

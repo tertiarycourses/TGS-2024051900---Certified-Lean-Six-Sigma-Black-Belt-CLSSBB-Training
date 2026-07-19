@@ -157,7 +157,7 @@ DOMAIN1 = [
         services="SIPOC, process boundaries, swimlane mapping, handoff analysis, rework loops, scope control",
         steps=[
             ("Recap SIPOC in full: Suppliers, Inputs, Process, Outputs, Customers — and why it is built right-to-left, starting from the customer.", ""),
-            ("Build the SIPOC for your capstone process at five to seven high-level steps. Agree the first and last step explicitly — that IS your scope.", ""),
+            ("Open the online SIPOC tool and build the SIPOC for your capstone process at five to seven high-level steps. Agree the first and last step explicitly — that IS your scope.", "https://alfredang.github.io/sipoc/"),
             ("Recap process mapping symbols and conventions, and the difference between as-is and to-be maps.", ""),
             ("Build a detailed swimlane map of your capstone process, with one lane per role or function.", ""),
             ("Mark every handoff between lanes. Handoffs are where defects, delays and ownership gaps concentrate.", ""),

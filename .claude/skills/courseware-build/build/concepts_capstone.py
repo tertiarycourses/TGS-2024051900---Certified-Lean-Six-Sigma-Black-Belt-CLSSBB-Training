@@ -22,28 +22,30 @@ def capstone_phase(d):
     # ============================================================
     # SECTION A - THE CAPSTONE IS THE ASSESSMENT
     # ============================================================
-    d.big_statement("There is no exam in this course",
-                    "The capstone project and the steering committee presentation ARE the assessment.",
+    d.big_statement("Two things happen on Day 5",
+                    "You sit the WSQ assessment, AND you present the capstone you have been "
+                    "building since Lab 1.",
                     K, color=VIOLET)
 
     d.compare_panels("How this course is assessed", [
-        ("What there is NOT", "No paper, no exam", [
-            "No practice exam anywhere in the five days",
-            "No written assessment paper",
-            "No practical assessment paper",
-            "No multiple choice, no time-limited test",
+        ("THE WSQ ASSESSMENT", "Required for certification", [
+            "Written Assessment (WA) - Short-Answer Questions (SAQ)",
+            "Case Study (CS) - an applied DMAIC case study",
+            "Both are OPEN BOOK - slides, Learner Guide, approved materials",
+            "WA covers the knowledge (K1, K2); CS covers the abilities (A1-A5)",
+            "75 percent attendance is required to be eligible",
         ]),
-        ("What there IS", "Two assessed deliverables", [
+        ("THE CAPSTONE", "Additional course deliverable", [
             "The CAPSTONE PROJECT REPORT - your consolidated DMAIC storyboard",
             "The STEERING COMMITTEE PRESENTATION - 15 minutes plus defence",
-            "Both built from the artifacts you produced in every lab",
-            "Assessed on evidence and reasoning, not recall",
+            "Built from the artifacts you produced in every lab since Lab 1",
+            "On TOP of the WSQ papers, not a replacement for them",
         ]),
-        ("Why it is assessed this way", "A Black Belt is judged by projects", [
-            "No employer asks for your exam score",
-            "They ask what you delivered and what it saved",
+        ("WHY BOTH", "Certification and capability", [
+            "The papers evidence the competency standard for WSQ",
+            "The capstone evidences that you can actually run a project",
+            "No employer asks for your exam score alone",
             "Defending an analysis under challenge is the real skill",
-            "This mirrors your first day back at work",
         ]),
     ], kicker=K, accent=VIOLET)
 

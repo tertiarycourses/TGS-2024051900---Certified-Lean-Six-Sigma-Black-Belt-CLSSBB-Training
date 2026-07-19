@@ -561,9 +561,9 @@ def foundations(d):
     # 8. THE CAPSTONE PROJECT
     # ================================================================
     d.big_statement(
-        "There is no exam this week.",
-        "You are assessed on a capstone project built on YOUR own workplace process - chosen today, "
-        "developed in every lab, and presented to a simulated steering committee on Day 5.",
+        "Your capstone starts today.",
+        "Alongside the WSQ assessment, you build a capstone project on YOUR own workplace process - "
+        "chosen today, developed in every lab, and presented to a simulated steering committee on Day 5.",
         "YOUR CAPSTONE PROJECT", color=TEAL)
 
     d.tile_grid(
@@ -573,7 +573,7 @@ def foundations(d):
          ("It accumulates artefacts", "Charter, SIPOC, MSA, capability study, hypothesis tests, DOE, control plan - all yours."),
          ("Day 5 consolidates", "The final day assembles everything into one coherent project storyboard."),
          ("You present to a panel", "A simulated steering committee tollgate review, with challenge questions."),
-         ("No written paper", "There is no exam and no practical paper. The capstone and the presentation are the assessment.")],
+         ("Additional to the WSQ papers", "You also sit the Written Assessment (SAQ) and the Case Study on Day 5. Both open book.")],
         kicker="THE ASSESSMENT MODEL", cols=2, accent=TEAL)
 
     d.flow_h(

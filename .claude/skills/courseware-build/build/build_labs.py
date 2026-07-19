@@ -42,6 +42,7 @@ TOOLS = {
     "fishbone": ("Fishbone Diagram", "https://alfredang.github.io/fishbone/"),
     "pareto": ("Pareto Chart (collaborative)", "https://alfredang.github.io/paretochart/"),
     "novaspc": ("NovaSPC", "https://alfredang.github.io/novaspc/"),
+    "sipoc": ("SIPOC", "https://alfredang.github.io/sipoc/"),
 }
 
 # The running scenario is defined ONCE in data_domain1.py and imported here, so the
@@ -147,7 +148,7 @@ def readme_md():
     out.append("- **In order.** Later labs consume the charter, baseline, measurement study and "
                "analysis produced by earlier ones.")
     out.append("- **Every lab is assessed.** Its output becomes part of the capstone project you "
-               "present and defend on Day 5. There is no written or practical exam.")
+               "present and defend on Day 5, in addition to the WSQ assessment (WA (SAQ) + Case Study).")
     out.append("")
     out.append("## Lab index")
     out.append("")
@@ -201,10 +202,12 @@ def tools_md():
     fish = _labs_using("fishbone", "ishikawa")
     pare = _labs_using("pareto")
     spc = _labs_using("run chart", "control chart", "spc", "process capability")
+    sipoc = _labs_using("sipoc")
     out.append(f"| [5 Whys](https://alfredang.github.io/5whys/) | Build and share a 5 Whys root-cause chain | {five} |")
     out.append(f"| [Fishbone Diagram](https://alfredang.github.io/fishbone/) | Build an Ishikawa cause-and-effect diagram | {fish} |")
     out.append(f"| [Pareto Chart](https://alfredang.github.io/paretochart/) | Collaborative session: the team brainstorms and votes, and the Pareto chart builds itself live | {pare} |")
     out.append(f"| [NovaSPC](https://alfredang.github.io/novaspc/) | Run charts, SPC charts (c, u, np, p, X-mR, X̄-R, X̄-s) and process capability from your own CSV | {spc} |")
+    out.append(f"| [SIPOC](https://alfredang.github.io/sipoc/) | Build a SIPOC map — Suppliers, Inputs, Process, Outputs, Customers — and agree the process boundaries | {sipoc} |")
     out.append("")
     out.append("### Using the collaborative Pareto tool")
     out.append("")

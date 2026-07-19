@@ -1,6 +1,6 @@
 # Certified Lean Six Sigma Black Belt (CLSSBB) Training — Learner Guide
 
-**WSQ Course Code:** TGS-2024051900  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v2 · 19 July 2026**
+**WSQ Course Code:** TGS-2024051900  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v3 · 20 July 2026**
 
 ## Contents
 
@@ -61,9 +61,9 @@ This Learner Guide accompanies the WSQ course Certified Lean Six Sigma Black Bel
 
 The course content is grounded in the body of knowledge published by The Council for Six Sigma Certification (CSSC) in 'Six Sigma: A Complete Step-by-Step Guide', so what you learn here matches the recognised Black Belt standard.
 
-This course is the deliberate step up from the Green Belt (CLSSGB, TGS-2025055775). DMAIC is recapped IN DEPTH — because a Black Belt must be able to MENTOR Green Belts through these tools, and you cannot coach what you only half-recall — and then extended with the advanced material the Green Belt course does not teach: attribute MSA and Kappa analysis, nested and destructive gauge studies, multiple regression with model diagnostics, ANOVA and interaction effects, non-parametric tests, multi-vari studies, full and fractional factorial Design of Experiments, response surface methodology, Taguchi robust design, CUSUM, EWMA and multivariate SPC, change leadership, and financial benefits validation.
+This course is the deliberate step up from the Green Belt (CLSSGB). DMAIC is recapped IN DEPTH — because a Black Belt must be able to MENTOR Green Belts through these tools, and you cannot coach what you only half-recall — and then extended with the advanced material the Green Belt course does not teach: attribute MSA and Kappa analysis, nested and destructive gauge studies, multiple regression with model diagnostics, ANOVA and interaction effects, non-parametric tests, multi-vari studies, full and fractional factorial Design of Experiments, response surface methodology, Taguchi robust design, CUSUM, EWMA and multivariate SPC, change leadership, and financial benefits validation.
 
-YOUR CAPSTONE PROJECT RUNS FROM DAY 1. In Lab 1 you select a real process from your own workplace and charter it. Every lab thereafter adds one artifact to that same project — the measurement study, the regression model, the experiment design, the control plan. On Day 5 you consolidate those artifacts into an A3 storyboard and present and defend it to a steering committee. There is no practice exam and no written or practical assessment paper: the capstone project and presentation ARE the assessment. A worked reference scenario (Meridian Medical Devices — infusion pump assemblies across three plants) is provided throughout for learners who cannot use workplace data.
+YOUR CAPSTONE PROJECT RUNS FROM DAY 1. In Lab 1 you select a real process from your own workplace and charter it. Every lab thereafter adds one artifact to that same project — the measurement study, the regression model, the experiment design, the control plan. On Day 5 you consolidate those artifacts into an A3 storyboard and present and defend it to a steering committee. The capstone is an ADDITIONAL deliverable on top of the WSQ assessment (Written Assessment SAQ + Case Study), which you also sit on Day 5. A worked reference scenario (Meridian Medical Devices — infusion pump assemblies across three plants) is provided throughout for learners who cannot use workplace data.
 
 
 ## Course Learning Outcomes
@@ -107,12 +107,13 @@ This course is aligned to the WSQ Technical Skills and Competencies (TSC) Qualit
 
 **The interactive problem-solving toolkit**
 
-Four browser-based tools are used during the labs. No installation or licence is required.
+Five browser-based tools are used during the labs. No installation or licence is required.
 
 - 5 Whys — build and share a 5 Whys chain: https://alfredang.github.io/5whys/
 - Fishbone Diagram — build an Ishikawa cause-and-effect diagram: https://alfredang.github.io/fishbone/
 - Pareto Chart (collaborative) — your team brainstorms and votes in one live session and the Pareto chart builds itself: https://alfredang.github.io/paretochart/
 - NovaSPC — run charts, SPC charts and process capability from your own CSV: https://alfredang.github.io/novaspc/
+- SIPOC — build a SIPOC map (Suppliers, Inputs, Process, Outputs, Customers) and agree the process boundaries: https://alfredang.github.io/sipoc/
 
 **How the labs work**
 
@@ -353,7 +354,12 @@ A SIPOC, a detailed swimlane process map and a documented scope boundary.   (Too
 **Step-by-step**
 
 1. Recap SIPOC in full: Suppliers, Inputs, Process, Outputs, Customers — and why it is built right-to-left, starting from the customer.
-2. Build the SIPOC for your capstone process at five to seven high-level steps. Agree the first and last step explicitly — that IS your scope.
+2. Open the online SIPOC tool and build the SIPOC for your capstone process at five to seven high-level steps. Agree the first and last step explicitly — that IS your scope.
+
+   ```bash
+   https://alfredang.github.io/sipoc/
+   ```
+
 3. Recap process mapping symbols and conventions, and the difference between as-is and to-be maps.
 4. Build a detailed swimlane map of your capstone process, with one lane per role or function.
 5. Mark every handoff between lanes. Handoffs are where defects, delays and ownership gaps concentrate.
@@ -1527,10 +1533,12 @@ Your lessons are separated into project-specific and transferable, you have a na
 
 ## Preparing for the Assessment
 
-- Capstone Project Report — the consolidated DMAIC storyboard built across Days 1-4 (K1, K2).
-- Capstone Presentation — a 15-minute steering committee presentation and defence (A1-A5).
-- There is NO practice exam and NO written or practical assessment paper in this course.
-- Your capstone IS the assessment — it is built from the artifacts you produce in Labs 1 to 30.
+- Written Assessment (WA) — Short-Answer Questions (SAQ), 2 questions, 1 hour, open book (K1, K2).
+- Case Study (CS) — an applied DMAIC case study, 90 minutes, open book (A1-A5).
+- Capstone Project & Presentation — an ADDITIONAL course deliverable on top of the WSQ assessment: the consolidated DMAIC storyboard built across Labs 1-30, presented and defended to a steering committee on Day 5.
+- The WSQ assessment is the Written Assessment (SAQ) plus the Case Study (CS) — both open book.
+- Your capstone is ADDITIONAL to the WSQ papers; it is built from the artifacts of Labs 1 to 30.
+- Revise by re-working your own lab outputs — they cover every tool the papers can ask about.
 - Open book: you may use these slides, this Learner Guide and your own project data throughout.
 - Consolidate your artifacts into a ONE-PAGE A3 storyboard: Background, Current State, Goal, Root Cause, Countermeasures, Results, Follow-up.
 - Lead your presentation with the decision, the benefit and the ask — the sponsor needs those in the first two minutes.

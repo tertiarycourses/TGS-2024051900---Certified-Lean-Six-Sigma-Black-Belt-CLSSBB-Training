@@ -14,7 +14,7 @@ This repository contains **34 guided Lean Six Sigma Black Belt labs** (34 core a
 
 | Artifact | File |
 |----------|------|
-| **Slide deck** | `courseware/Certified Lean Six Sigma Black Belt (CLSSBB) Training-v2.pptx` (and `.pdf`) |
+| **Slide deck** | `courseware/Certified Lean Six Sigma Black Belt (CLSSBB) Training-v3.pptx` (and `.pdf`) |
 | **Learner Guide (Markdown)** | [LG-Certified Lean Six Sigma Black Belt (CLSSBB) Training.md](LG-Certified%20Lean%20Six%20Sigma%20Black%20Belt%20%28CLSSBB%29%20Training.md) |
 | **Learner Guide (DOCX/PDF)** | `courseware/LG-Certified Lean Six Sigma Black Belt (CLSSBB) Training.docx` (and `.pdf`) |
 | **Lesson Plan (DOCX/PDF)** | `courseware/LP-Certified Lean Six Sigma Black Belt (CLSSBB) Training.docx` (and `.pdf`) |
@@ -131,4 +131,4 @@ All artifacts are generated from `course_data.py` + `data_domainN.py`, so the de
 
 ---
 
-*Version v2 · 19 July 2026 · © 2026 Tertiary Infotech Academy Pte Ltd*
+*Version v3 · 20 July 2026 · © 2026 Tertiary Infotech Academy Pte Ltd*

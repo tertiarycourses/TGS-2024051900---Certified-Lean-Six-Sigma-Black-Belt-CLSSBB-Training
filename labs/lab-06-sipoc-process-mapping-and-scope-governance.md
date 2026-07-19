@@ -16,6 +16,10 @@ A SIPOC, a detailed swimlane process map and a documented scope boundary.
 
 **Tools and techniques:** SIPOC, process boundaries, swimlane mapping, handoff analysis, rework loops, scope control
 
+### Online tools used in this lab
+
+- **SIPOC** — https://alfredang.github.io/sipoc/
+
 ## Steps
 
 ### Step 1
@@ -24,7 +28,9 @@ Recap SIPOC in full: Suppliers, Inputs, Process, Outputs, Customers — and why 
 
 ### Step 2
 
-Build the SIPOC for your capstone process at five to seven high-level steps. Agree the first and last step explicitly — that IS your scope.
+Open the online SIPOC tool and build the SIPOC for your capstone process at five to seven high-level steps. Agree the first and last step explicitly — that IS your scope.
+
+Open the tool: <https://alfredang.github.io/sipoc/>
 
 ### Step 3
 
@@ -64,4 +70,4 @@ Save your output — it forms part of your CAPSTONE PROJECT PACK, which you cons
 
 ---
 
-*Certified Lean Six Sigma Black Belt (CLSSBB) Training · TGS-2024051900 · Version v2 · © 2026 Tertiary Infotech Academy Pte Ltd*
+*Certified Lean Six Sigma Black Belt (CLSSBB) Training · TGS-2024051900 · Version v3 · © 2026 Tertiary Infotech Academy Pte Ltd*

@@ -561,6 +561,15 @@ def define_phase(d):
             ("Do it in the room in 45 minutes", "SIPOC is an alignment device. Perfecting it offline defeats its purpose."),
         ], kicker=K, cols=2, accent=TEAL)
 
+    d.flow_h(
+        "Build your SIPOC online - alfredang.github.io/sipoc", [
+            "Open the SIPOC tool in your browser - no login or licence needed",
+            "Name the process, then fix the START and STOP steps first",
+            "Work right to left: Customers, Outputs, Process, Inputs, Suppliers",
+            "Add 4 to 7 verb-noun process steps in the room with the team",
+            "Export the SIPOC into your capstone project pack",
+        ], kicker="INTERACTIVE TOOL - USED IN LAB 6", color=TEAL)
+
     # ================= SECTION 10: stakeholders =================
     d.big_statement(
         "Every project you lead will be decided by people, not by data",

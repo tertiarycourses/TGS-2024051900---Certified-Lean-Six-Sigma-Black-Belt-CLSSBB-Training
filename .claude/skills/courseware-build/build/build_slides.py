@@ -93,7 +93,7 @@ d.content("Let's Know Each Other", [
 d.big_statement("Your Capstone Project Starts Today",
                 "You will choose a real process from your own workplace in Lab 1, and every "
                 "lab across the next five days adds one artifact to it. On Day 5 you present "
-                "it to a steering committee. There is no exam.",
+                "it to a steering committee - in addition to the WSQ assessment.",
                 "HOW THIS COURSE WORKS", color=TEAL)
 
 d.flow_h("How Your Capstone Is Built", [
@@ -130,6 +130,16 @@ else:
         "Download the slides, Learner Guide and lab files",
         "Keep them open — the assessment is open book",
     ], kicker="COURSE PORTAL · lms-tms.tertiaryinfotech.com", color=TEAL)
+
+# --- Interactive problem-solving toolkit (browser-based, no licence needed) ---
+d.tile_grid("Your Interactive Toolkit", [
+    ("SIPOC", "Build a SIPOC map and agree process boundaries — alfredang.github.io/sipoc"),
+    ("Fishbone Diagram", "Build an Ishikawa cause-and-effect diagram — alfredang.github.io/fishbone"),
+    ("5 Whys", "Build and share a 5 Whys root-cause chain — alfredang.github.io/5whys"),
+    ("Pareto Chart", "Team brainstorms and votes; the chart builds itself live — alfredang.github.io/paretochart"),
+    ("NovaSPC", "Run charts, SPC charts and process capability from your CSV — alfredang.github.io/novaspc"),
+    ("No installation", "All run in the browser. No licence, no setup — use them in the labs."),
+], kicker="BROWSER-BASED TOOLS USED IN THE LABS", cols=2, size=14, accent=TEAL)
 
 # --- Lesson plan: 5 days ---
 d.two_col("Lesson Plan — Days 1 & 2",
@@ -243,18 +253,18 @@ if roadmap:
 
 # --- Briefing BEFORE assessment (house hard rule) ---
 d.tile_grid("Briefing for Assessment", [
-    ("Your capstone is the assessment", "There is no written exam — you are assessed on your own project."),
-    ("Build it from Day 1", "Every lab adds one artifact; keep them all in your project pack."),
-    ("Use real workplace data", "Where you cannot, the Meridian scenario is provided as a fallback."),
-    ("Individual work", "The capstone is your own project, presented and defended by you."),
-    ("15-minute presentation", "Timed. Prepare an appendix for the challenge questions."),
-    ("Submit before you present", "Hand in your project report and A3 storyboard on Day 5."),
-], kicker="BEFORE YOUR CAPSTONE ASSESSMENT", cols=2, size=15, accent=VIOLET)
+    ("Clear your desk", "Phones and other materials go under the table or on the floor."),
+    ("No photos or recording", "Assessment scripts must not be photographed or recorded."),
+    ("No discussion", "The assessment is individual work — no talking once it starts."),
+    ("Black or blue pen", "Use a black or blue pen for hard-copy assessments."),
+    ("No correction fluid", "No liquid paper or correction tape — strike through instead."),
+    ("Open book", "Slides, Learner Guide and approved materials only."),
+], kicker="BEFORE YOU SIT THE ASSESSMENT", cols=2, size=15, accent=VIOLET)
 
-d.tile_grid("Assessment — The Capstone Project", [
-    ("No written exam", "This course has NO practice exam and no written or practical paper."),
-    ("Capstone Project Report", "The consolidated DMAIC storyboard you build across Days 1-4 (K1, K2)."),
-    ("Capstone Presentation", "A 15-minute steering committee presentation and defence (A1-A5)."),
+d.tile_grid("Assessment", [
+    ("Written Assessment (WA)", "Short-Answer Questions (SAQ) — 2 questions, 1 hour, open book (K1, K2)."),
+    ("Case Study (CS)", "An applied DMAIC case study — 90 minutes, open book (A1-A5)."),
+    ("Capstone (additional)", "Your project + steering committee presentation, on top of the WSQ assessment."),
     ("Built from Day 1", "Every lab from Lab 1 onwards adds one artifact to your capstone."),
     ("Attendance", C.ASSESSMENT["note"]),
     ("Appeals", "An appeal process is available if required."),
@@ -267,8 +277,8 @@ d.tile_grid("Assessment — The Capstone Project", [
 ASSESSMENT_FLOW = [
     "TRAQOM survey — scan the QR code on the LMS",
     "Assessment digital attendance — scan the SSG QR",
-    "Submit your capstone project report and A3 storyboard",
-    "Present and defend your capstone to the steering committee",
+    "Sit the WA (SAQ, 1 hour), then the Case Study (90 minutes)",
+    "Submit your capstone report and present it to the steering committee",
     "Sign the Assessment Summary Record",
 ]
 d.flow_h("Assessment Flow", ASSESSMENT_FLOW, kicker="ON ASSESSMENT DAY", color=VIOLET)
@@ -412,9 +422,9 @@ d.tile_grid("Continuing Your Black Belt Journey", [
 
 # ============================================================ CLOSE (house order)
 # Assessment -> Assessment Flow -> Digital Attendance -> TRAQOM -> Thank You
-d.big_statement("Final Assessment — Your Capstone",
-                "Submit your capstone project report and A3 storyboard, then present and "
-                "defend it to the steering committee. There is no written exam.",
+d.big_statement("Final Assessment",
+                "Sit the Written Assessment (SAQ, 1 hour) then the Case Study (90 minutes) — both "
+                "open book. Your capstone project and presentation are delivered in addition.",
                 "ASSESSMENT", color=VIOLET)
 
 d.flow_h("Assessment Flow", ASSESSMENT_FLOW, kicker="ON ASSESSMENT DAY", color=VIOLET)

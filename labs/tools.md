@@ -12,6 +12,7 @@ These browser-based tools are used during the labs. No installation or licence n
 | [Fishbone Diagram](https://alfredang.github.io/fishbone/) | Build an Ishikawa cause-and-effect diagram | Lab 16 |
 | [Pareto Chart](https://alfredang.github.io/paretochart/) | Collaborative session: the team brainstorms and votes, and the Pareto chart builds itself live | Labs 15, 23, 31 |
 | [NovaSPC](https://alfredang.github.io/novaspc/) | Run charts, SPC charts (c, u, np, p, X-mR, X̄-R, X̄-s) and process capability from your own CSV | Labs 10, 14, 15, 27, 28, 29, 30, 31, 32 |
+| [SIPOC](https://alfredang.github.io/sipoc/) | Build a SIPOC map — Suppliers, Inputs, Process, Outputs, Customers — and agree the process boundaries | Lab 6 |
 
 ### Using the collaborative Pareto tool
 

@@ -2,9 +2,9 @@
 Domain 6 — DAY 5: CAPSTONE CONSOLIDATION AND PRESENTATION. Labs 31-34.
 
 This is where the capstone the learner has been building since Lab 1 is
-consolidated, rehearsed, presented and defended. There is NO practice exam and no
-written/practical assessment paper in this course — the capstone project and its
-steering committee presentation ARE the assessment.
+consolidated, rehearsed, presented and defended. The capstone is an ADDITIONAL
+deliverable on top of the WSQ assessment (Written Assessment SAQ + Case Study),
+which learners also sit on Day 5.
 
 By this point the learner already holds, from Labs 1-30:
     charter, portfolio map, Y=f(X), baseline sigma, VOC/Kano, CTQ flowdown,

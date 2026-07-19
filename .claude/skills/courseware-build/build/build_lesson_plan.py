@@ -175,16 +175,16 @@ SCHEDULE = {
     ("9:30","9:45",15,"recap","Day 4 recap and mandatory digital attendance (AM)"),
     ("9:45","11:00",75,"lab","Hands-on: "+lab_titles([28,29])+sll([28,29])),
     ("11:00","11:15",15,"break","Tea break"),
-    ("11:15","12:00",45,"lab","Hands-on: "+lab_titles([30])+sll([30])),
-    ("12:00","12:30",30,"topic","CAPSTONE — consolidating your artifacts from Labs 1-30; the A3 storyboard structure (Background, Current State, Goal, Root Cause, Countermeasures, Results, Follow-up); the one-page discipline and the 60-second visual test"+sl("Capstone")),
+    ("11:15","11:45",30,"lab","Hands-on: "+lab_titles([30])+sll([30])),
+    ("11:45","12:30",45,"topic","CAPSTONE — consolidating your artifacts from Labs 1-30; the A3 storyboard structure (Background, Current State, Goal, Root Cause, Countermeasures, Results, Follow-up); building the steering committee presentation; the two-minute rule and the appendix strategy"+sl("Capstone")),
     ("12:30","13:30",60,"lunch","Lunch break"),
-    ("13:30","14:30",60,"lab","Hands-on: "+lab_titles([31])+sll([31])),
-    ("14:30","15:00",30,"topic","CAPSTONE — building the steering committee presentation; audience needs; the two-minute rule; chart selection and projector legibility; stating statistics in business language; the appendix strategy for defending challenges"),
-    ("15:00","15:15",15,"break","Tea break"),
-    ("15:15","16:00",45,"lab","Hands-on: "+lab_titles([32])+sll([32])),
-    ("16:00","16:15",15,"assess","Briefing for Assessment — capstone submission and presentation format"+sl("Wrap-up")),
-    ("16:15","17:45",90,"assess","CAPSTONE ASSESSMENT — submit the capstone project report and A3 storyboard, then deliver and defend the 15-minute steering committee presentation"+sll([33])),
-    ("17:45","18:30",45,"lab","Hands-on: "+lab_titles([34])+sll([34])+" — lessons learned, mentoring Green Belts and your 90-day plan. PM digital attendance"),
+    ("13:30","14:15",45,"lab","Hands-on: "+lab_titles([31,32])+sll([31,32])),
+    ("14:15","15:15",60,"lab","Hands-on: "+lab_titles([33])+sll([33])+" — capstone presentations to the steering committee panel"),
+    ("15:15","15:30",15,"break","Tea break"),
+    ("15:30","15:45",15,"lab","Hands-on: "+lab_titles([34])+sll([34])+" — lessons learned, mentoring Green Belts and your 90-day plan"),
+    ("15:45","16:00",15,"assess","Course recap and Briefing for Assessment"+sl("Wrap-up")),
+    ("16:00","17:00",60,"assess","WSQ ASSESSMENT — Written Assessment (WA), Short-Answer Questions. 1 hour, open book"),
+    ("17:00","18:30",90,"assess","WSQ ASSESSMENT — Case Study (CS). 90 minutes, open book. PM digital attendance"),
  ]),
 }
 
@@ -199,7 +199,7 @@ prodoc.add_cover_page(doc,"LESSON PLAN",C.TITLE,C.VERSION.lstrip("v"),
 prodoc.add_version_control(doc,[
  ("1","1 June 2026","Initial release - CLSSBB lesson plan.",C.TRAINER),
  ("2",C.VERSION_DATE,"Major revision: rebuilt as a 5-day Black Belt progression from the Green Belt "
-  "(CLSSGB, TGS-2025055775). DMAIC is recapped IN DEPTH (a Black Belt must be able to mentor Green "
+  "course (CLSSGB). DMAIC is recapped IN DEPTH (a Black Belt must be able to mentor Green "
   "Belts through these tools) and then extended with Black-Belt-only content the Green Belt course "
   "does not teach: attribute MSA and Kappa analysis, nested and destructive gauge studies, non-normal "
   "capability and Cpk versus Ppk, multiple regression with model diagnostics and VIF, ANOVA with "
@@ -209,9 +209,8 @@ prodoc.add_version_control(doc,[
   "management, financial benefits validation, and mentoring Green Belts. Expanded to 34 hands-on "
   "labs across five days. THE CAPSTONE PROJECT RUNS FROM DAY 1 - each learner selects a real "
   "workplace process in Lab 1 and every subsequent lab adds one artifact to it; Day 5 consolidates "
-  "the artifacts into an A3 storyboard and a steering committee presentation. There is no practice "
-  "exam and no written or practical assessment paper - the capstone project and presentation are "
-  "the assessment.",C.TRAINER),
+  "the artifacts into an A3 storyboard and a steering committee presentation.",C.TRAINER),
+ ("3",C.VERSION_DATE,"Corrected the assessment model to match the registered WSQ instrument: the assessment is the Written Assessment (WA) Short-Answer Questions plus the Case Study (CS), both open book. The capstone project and steering committee presentation are retained as an ADDITIONAL course deliverable on top of the WSQ assessment, not as a replacement for it. Added the online SIPOC tool (alfredang.github.io/sipoc) to the toolkit, Lab 6 and the Define slides.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 
@@ -239,10 +238,11 @@ for lo in C.LEARNING_OUTCOMES:
 
 H("Assessment",1)
 for a in [C.ASSESSMENT["written"],C.ASSESSMENT["practical"],
-          "This course has NO practice exam and NO written or practical assessment paper.",
-          "The capstone project is built across Labs 1-30 and consolidated on Day 5.",
-          "Format: Open Book — course slides, Learner Guide and the learner's own project data.",
-          "The capstone assessment is conducted on Day 5 from 4:15 pm.",C.ASSESSMENT["note"]]:
+          C.ASSESSMENT["capstone"],
+          "Format: Open Book — course slides, Learner Guide and approved materials only.",
+          "The WSQ assessment is conducted on Day 5: WA (SAQ) from 4:00 pm (1 hour), then the Case Study from 5:00 pm (90 minutes).",
+          "The capstone presentation is delivered on Day 5 and is additional to the WSQ assessment.",
+          C.ASSESSMENT["note"]]:
     p=doc.add_paragraph(style="List Bullet"); p.add_run(a).font.size=Pt(10.5)
 
 def set_cell(cell,text,bold=False,size=9.5,color=None,fill=None,align=None):

@@ -57,7 +57,7 @@ p(f"This Learner Guide accompanies the WSQ course {C.TITLE} ({C.COURSE_CODE}), c
 p("The course content is grounded in the body of knowledge published by The Council for Six Sigma "
   "Certification (CSSC) in 'Six Sigma: A Complete Step-by-Step Guide', so what you learn here matches "
   "the recognised Black Belt standard.")
-p("This course is the deliberate step up from the Green Belt (CLSSGB, TGS-2025055775). DMAIC is recapped "
+p("This course is the deliberate step up from the Green Belt (CLSSGB). DMAIC is recapped "
   "IN DEPTH — because a Black Belt must be able to MENTOR Green Belts through these tools, and you cannot "
   "coach what you only half-recall — and then extended with the advanced material the Green Belt course "
   "does not teach: attribute MSA and Kappa analysis, nested and destructive gauge studies, multiple "
@@ -67,9 +67,9 @@ p("This course is the deliberate step up from the Green Belt (CLSSGB, TGS-202505
 p("YOUR CAPSTONE PROJECT RUNS FROM DAY 1. In Lab 1 you select a real process from your own workplace and "
   "charter it. Every lab thereafter adds one artifact to that same project — the measurement study, the "
   "regression model, the experiment design, the control plan. On Day 5 you consolidate those artifacts "
-  "into an A3 storyboard and present and defend it to a steering committee. There is no practice exam "
-  "and no written or practical assessment paper: the capstone project and presentation ARE the "
-  "assessment. A worked reference scenario (Meridian Medical Devices — infusion pump assemblies across "
+  "into an A3 storyboard and present and defend it to a steering committee. The capstone is an "
+  "ADDITIONAL deliverable on top of the WSQ assessment (Written Assessment SAQ + Case Study), which "
+  "you also sit on Day 5. A worked reference scenario (Meridian Medical Devices — infusion pump assemblies across "
   "three plants) is provided throughout for learners who cannot use workplace data.")
 
 h1("Course Learning Outcomes")
@@ -91,12 +91,13 @@ bullets([
  "A REAL process from your own workplace, with accessible data — this becomes your capstone project.",
 ])
 h3("The interactive problem-solving toolkit")
-p("Four browser-based tools are used during the labs. No installation or licence is required.")
+p("Five browser-based tools are used during the labs. No installation or licence is required.")
 bullets([
  "5 Whys — build and share a 5 Whys chain: https://alfredang.github.io/5whys/",
  "Fishbone Diagram — build an Ishikawa cause-and-effect diagram: https://alfredang.github.io/fishbone/",
  "Pareto Chart (collaborative) — your team brainstorms and votes in one live session and the Pareto chart builds itself: https://alfredang.github.io/paretochart/",
  "NovaSPC — run charts, SPC charts and process capability from your own CSV: https://alfredang.github.io/novaspc/",
+ "SIPOC — build a SIPOC map (Suppliers, Inputs, Process, Outputs, Customers) and agree the process boundaries: https://alfredang.github.io/sipoc/",
 ])
 h3("How the labs work")
 bullets([
@@ -174,8 +175,10 @@ h1("Preparing for the Assessment")
 bullets([
  C.ASSESSMENT["written"],
  C.ASSESSMENT["practical"],
- "There is NO practice exam and NO written or practical assessment paper in this course.",
- "Your capstone IS the assessment — it is built from the artifacts you produce in Labs 1 to 30.",
+ C.ASSESSMENT["capstone"],
+ "The WSQ assessment is the Written Assessment (SAQ) plus the Case Study (CS) — both open book.",
+ "Your capstone is ADDITIONAL to the WSQ papers; it is built from the artifacts of Labs 1 to 30.",
+ "Revise by re-working your own lab outputs — they cover every tool the papers can ask about.",
  "Open book: you may use these slides, this Learner Guide and your own project data throughout.",
  "Consolidate your artifacts into a ONE-PAGE A3 storyboard: Background, Current State, Goal, Root Cause, Countermeasures, Results, Follow-up.",
  "Lead your presentation with the decision, the benefit and the ask — the sponsor needs those in the first two minutes.",
@@ -287,7 +290,7 @@ prodoc.add_cover_page(doc,"LEARNER GUIDE",C.TITLE,C.VERSION.lstrip("v"),
 prodoc.add_version_control(doc,[
  ("1","1 June 2026","Initial release - CLSSBB Learner Guide.",C.TRAINER),
  ("2",C.VERSION_DATE,"Major revision: rebuilt as a 5-day Black Belt progression from the Green Belt "
-  "(CLSSGB, TGS-2025055775). DMAIC is recapped IN DEPTH and then extended with Black-Belt-only content: "
+  "course (CLSSGB). DMAIC is recapped IN DEPTH and then extended with Black-Belt-only content: "
   "attribute MSA and Kappa analysis, nested and destructive gauge studies, non-normal capability and "
   "Cpk versus Ppk, multiple regression with model diagnostics and VIF, ANOVA with interaction effects, "
   "non-parametric tests, multi-vari studies, full and fractional factorial Design of Experiments with "
@@ -296,8 +299,8 @@ prodoc.add_version_control(doc,[
   "validation, and mentoring Green Belts. Expanded to 34 hands-on labs across five days. THE CAPSTONE "
   "PROJECT RUNS FROM DAY 1 - each learner charters a real workplace process in Lab 1 and every "
   "subsequent lab adds one artifact to it; Day 5 consolidates them into an A3 storyboard and a steering "
-  "committee presentation. There is no practice exam and no written or practical assessment paper - the "
-  "capstone project and presentation are the assessment.",C.TRAINER),
+  "committee presentation.",C.TRAINER),
+ ("3",C.VERSION_DATE,"Corrected the assessment model to match the registered WSQ instrument: the assessment is the Written Assessment (WA) Short-Answer Questions plus the Case Study (CS), both open book. The capstone project and steering committee presentation are retained as an ADDITIONAL course deliverable on top of the WSQ assessment, not as a replacement for it. Added the online SIPOC tool (alfredang.github.io/sipoc) to the toolkit, Lab 6 and the Define slides.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 
