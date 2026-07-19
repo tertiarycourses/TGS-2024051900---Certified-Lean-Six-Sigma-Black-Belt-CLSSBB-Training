@@ -357,12 +357,21 @@ for t in C.TOPICS:
     if acts:
         core = [a for a in acts if not a.get("elective")]
         opts = [a for a in acts if a.get("elective")]
+        # Truncate on a WORD boundary, never mid-word. The caps are set above the
+        # longest real lab title (83 chars) and build line (94), so in practice
+        # nothing is cut at all — the clip is a safety net for future content.
+        def clip(s, n):
+            if len(s) <= n:
+                return s
+            cut = s.rfind(" ", 0, n)
+            return (s[:cut] if cut > 0 else s[:n]).rstrip(" ,;:-—") + "…"
+
         rows = []
         for a in core:
-            rows.append((f"Lab {a['num']} — {a['title'][:46]}", a["build"][:70]))
+            rows.append((clip(f"Lab {a['num']} — {a['title']}", 88), clip(a["build"], 108)))
         for a in opts:
-            rows.append((f"Lab {a['num']} (elective) — {a['title'].replace('Elective — ', '')[:40]}",
-                         a["build"][:70]))
+            rows.append((clip(f"Lab {a['num']} (elective) — {a['title'].replace('Elective — ', '')}", 88),
+                         clip(a["build"], 108)))
         # tile_grid caps out around 6 rows at cols=1; chunk so nothing overflows
         for i in range(0, len(rows), 6):
             chunk = rows[i:i + 6]
