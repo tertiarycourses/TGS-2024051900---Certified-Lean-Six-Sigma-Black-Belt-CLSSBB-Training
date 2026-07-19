@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------------------
+# CONFIDENTIAL — never publish
+# ---------------------------------------------------------------------------
+# reference/ holds the Green Belt courseware, the Green Belt WA (SAQ) and PP
+# ASSESSMENT PAPERS AND ANSWER KEYS, and a copyrighted Six Sigma ebook.
+# None of it may be published. NOTE the folder is spelled "asssesemnt" in the
+# source, so a generic "assessment" filter does NOT catch it.
+reference/
+
+# Assessment papers and marking guides (any spelling) are trainer-only.
+**/assessment/
+**/assessments/
+**/asssesemnt/
+*Answers to *
+*WA (SAQ)*
+*PP Assessment*
+
+# ---------------------------------------------------------------------------
+# Oversized source material (GitHub hard-rejects files over 100 MB)
+# ---------------------------------------------------------------------------
+# The original 113 MB v21 trainer deck is the input to the rebuild, not an
+# output of it. Keep it locally; it does not belong in the repo.
+WSQ -*v21.pptx
+*.zip
+
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*credentials*.json
+*token*.json
+*client_secret*.json
+
+# ---------------------------------------------------------------------------
+# OS / office junk
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+~$*
+.~lock.*#
+*.tmp
