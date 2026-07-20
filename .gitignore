@@ -9,6 +9,12 @@ reference/
 
 # Assessment papers and marking guides (any spelling) are trainer-only.
 **/assessment/
+# ...but DO version the generator itself. The papers and answer keys stay out of
+# git; the code that builds them is reviewable and belongs in the repo.
+!**/assessment/
+!**/assessment/*.py
+**/assessment/*.docx
+**/assessment/*.pdf
 **/assessments/
 **/asssesemnt/
 *Answers to *
